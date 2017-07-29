@@ -6,7 +6,7 @@ A Docker image based on Ubuntu, serving PHP 7 running as Apache Module. Useful f
 Tags
 -----
 
-* latest: Ubuntu 16.04 (LTS), Apache 2.4, PHP 7.0.4 with support for setting `error_reporting`
+* latest: Ubuntu 16.04 (LTS), Apache 2.4, PHP 7.0.x with support for setting `error_reporting`
 
 Usage
 ------
@@ -37,22 +37,27 @@ Apache is configured to log both access and error log to STDOUT. So you can simp
 
 Installed packages
 -------------------
-* Ubuntu Server 16.04, based on ubuntu docker image
+* Ubuntu Server 16.10, based on ubuntu docker image
 * apache2
-* php7.0
-* php7.0-cli
-* libapache2-mod-php7.0
-* php7.0-gd
-* php7.0-json
-* php7.0-ldap
-* php7.0-mbstring
-* php7.0-mysql
-* php7.0-pgsql
-* php7.0-sqlite3
-* php7.0-xml
-* php7.0-xsl
-* php7.0-zip
-* php7.0-soap
+* php
+* php-cli
+* libapache2-mod-php
+* php-apcu
+* php-apcu-bc
+* php-gd
+* php-json
+* php-ldap
+* php-mbstring
+* php-mysql
+* php-opcache
+* php-pgsql
+* php-sqlite3
+* php-xml
+* php-xsl
+* php-zip
+* php-soap
+* php-xdebug
+* composer (php package manager)
 
 Default Configurations
 ----------------------
