@@ -18,7 +18,7 @@ $ docker run -d -P bylexus/apache-php7
 With all the options:
 
 ```bash
-$ docker run -d -p 8080:80 \
+$ docker run -d -p 80:80 \
     -v /home/user/webroot:/var/www \
     -e PHP_ERROR_REPORTING='E_ALL & ~E_STRICT' \
     bylexus/apache-php7
