@@ -9,4 +9,6 @@ sed -ri "s/^error_reporting\s*=.*$//g" /etc/php/7.0/cli/php.ini
 echo "error_reporting = $PHP_ERROR_REPORTING" >> /etc/php/7.0/apache2/php.ini
 echo "error_reporting = $PHP_ERROR_REPORTING" >> /etc/php/7.0/cli/php.ini
 
+# Apache gets grumpy about PID files pre-existing, so remove them:
+rm -f /var/run/apache2/apache2.pid
 source /etc/apache2/envvars && exec /usr/sbin/apache2 -DFOREGROUND
