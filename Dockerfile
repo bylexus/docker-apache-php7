@@ -4,8 +4,7 @@ MAINTAINER Alexander Schenkel <alex@alexi.ch>
 VOLUME ["/var/www"]
 
 RUN apt-get update && \
-    apt-get dist-upgrade -y && \
-    apt-get install -y \
+    apt-get install --no-install-recommends -y \
       apache2 \
       php7.0 \
       php7.0-cli \
@@ -24,7 +23,8 @@ RUN apt-get update && \
       php7.0-zip \
       php7.0-soap \
       php7.0-opcache \
-      composer
+      composer \
+    && rm -rf /var/lib/apt/lists/*
 
 COPY apache_default /etc/apache2/sites-available/000-default.conf
 COPY run /usr/local/bin/run
